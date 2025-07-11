@@ -42,7 +42,9 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',
     'corsheaders',
     'drf_yasg',
-
+    'core',
+    'services',
+    'booking',
 ]
 
 MIDDLEWARE = [
@@ -160,3 +162,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",       # Optional
     "http://147.45.146.15:2002",   # Production or test server
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+}
