@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'accounts',
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
+    'corsheaders',
+
 
 ]
 
@@ -51,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'server.urls'
@@ -149,3 +152,11 @@ SIMPLE_JWT = {
     'BLACKLIST_AFTER_ROTATION': True,
     'AUTH_HEADER_TYPES': ('Bearer',),
 }
+
+
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",       # Vite (React)
+    "http://127.0.0.1:3000",       # Optional
+    "http://147.45.146.15:2002",   # Production or test server
+]
