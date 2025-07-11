@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-cn(t95lyp$94e)(n457ar7urr6=moo0l&ltr(%^!n0hsj4ba7x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "http://localhost:3000",       # Vite (React)
+    "http://127.0.0.1:3000",       # Optional
+    "http://147.45.146.15:2002", 
+    ]
 
 
 # Application definition
